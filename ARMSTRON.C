@@ -1,3 +1,4 @@
+/*Armstrong number*/
 #include<stdio.h>
 void main()
 {
