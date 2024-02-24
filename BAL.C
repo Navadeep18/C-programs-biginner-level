@@ -1,3 +1,4 @@
+/*Printing a bill*/
 #include<stdio.h>
 void main()
 {
