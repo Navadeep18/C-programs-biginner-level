@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+int rows=5,r,c,k;
+clrscr();
+for(r=0;r<=rows;r++)
+{
+for(c=0;c<=rows-r;c++)
+{
+printf("* ");
+}
+printf("\n");
+}
+getch();
+}

@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main()
+{
+int org,num=151,rev=0,rem;
+clrscr();
+org=num;
+while(num!=0)
+{
+rem=num%10;
+rev=rev*10+rem;
+num/=10;
+}
+if(org==rev)
+printf("%d is a palindrome\n",org);
+else
+printf("%d is not a palindrome\n",org);
+getch();
+}

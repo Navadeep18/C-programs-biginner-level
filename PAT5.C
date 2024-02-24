@@ -1,0 +1,19 @@
+#include<stdio.h>
+void main()
+{
+int rows=5,r,c,k;
+clrscr();
+for(r=0;r<=5;r++)
+{
+for(c=0;c<=2*r;c++)
+{
+printf(" ");
+}
+for(k=0;k<2*(rows-r)-1;k++)
+{
+printf("* ");
+}
+printf("\n");
+}
+getch();
+}

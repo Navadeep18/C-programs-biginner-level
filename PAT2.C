@@ -1,0 +1,19 @@
+#include<stdio.h>
+void main()
+{
+int r,c,k;
+clrscr();
+for(r=0;r<=5;r++)
+{
+for(c=0;c<=2*(r-i)-1;c++)
+{
+printf(" ");
+}
+for(k=0;k<=r;k++)
+{
+printf("* ");
+}
+printf("\n");
+}
+getch();
+}
