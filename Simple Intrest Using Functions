@@ -1,0 +1,14 @@
+#include<stdio.h> 
+float si(float p,float t,float r); 
+int main() 
+{ 
+    float p=1000000 ,t=2,r=3; 
+    float si=p*t*r/100; 
+    printf("%.2f",si); 
+    return si; 
+} 
+float si(float p,float t,float r) 
+{ 
+    float si=p*t*r/100; 
+    return 0; 
+} 
