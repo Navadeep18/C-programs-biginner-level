@@ -1,0 +1,17 @@
+#include<stdio.h>
+void swapx(int *x ,int *y); 
+ int main() 
+ { 
+     int a=10,b=20; 
+     swapx(&a,&b); 
+     printf("in the caller: a=%d b=%d\n",a,b); 
+ } 
+ void swapx(int *x, int *y) 
+ { 
+     int temp; 
+     temp=*x; 
+     *x=*y; 
+     *y=temp; 
+     printf("inside function:x=%d y=%d\n",*x,*y); 
+return 0;
+} 
