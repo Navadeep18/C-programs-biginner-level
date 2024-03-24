@@ -1,0 +1,18 @@
+#include<stdio.h> 
+int convert(int n); 
+int main() 
+{ 
+    int bi=1101; 
+    printf("The given binary %d to decimal is %d",bi,convert(bi)); 
+} 
+int convert(int n) 
+{ 
+    if(n==0) 
+    { 
+        return 0; 
+    } 
+    else 
+    { 
+        return (n%10+2*convert(n/10)); 
+    } 
+} 
