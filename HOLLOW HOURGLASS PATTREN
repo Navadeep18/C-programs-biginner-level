@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+	int r,c,k,rows=5;
+	for(r=0;r<rows;r++)
+	{
+		for(c=0;c<2*r+1;c++)
+		{
+			printf(" ");
+		}
+		for(k=0;k<2*(rows-r)-1;k++)
+		{
+			if(k==0||k==2*(rows-r)-2||r==0)
+			printf("* ");
+			else
+			printf("  ");
+		}
+		printf("\n");
+	}
+		for(r=1;r<rows;r++)
+	{
+		for(c=0;c<2*(rows-r)-1;c++)
+		{
+			printf(" ");
+		}
+		for(k=0;k<2*r+1;k++)
+		{
+			if(k==0||k==2*r||r==rows-1)
+			printf("* ");
+			else
+			printf("  ");
+		}
+		printf("\n");
+	}
+	return 0;
+}
