@@ -1,0 +1,9 @@
+#include<math.h>
+#include<stdio.h>
+int main()
+{
+int a,num=6561;
+a=sqrt(num);
+printf("the value of a is %d",a);
+return 0;
+}
