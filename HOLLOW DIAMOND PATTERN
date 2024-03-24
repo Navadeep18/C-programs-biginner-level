@@ -1,0 +1,26 @@
+     #include<stdio.h>
+int main()
+{
+	int r,c,k,star,rows=5;
+	for(r=0;r<2*rows-1;r++)
+	{
+		if(r<rows)
+		star=2*(rows-r)-1;
+		else
+		star=2*(r-rows+1)+1;
+		
+		for(c=0;c<star;c++)
+		{
+			printf(" ");
+		}
+		for(k=0;k<2*rows-star;k++)
+		{
+			if(k==0||k==2*rows-star-1)
+			printf("* ");
+			else
+			printf("  ");
+		}
+		printf("\n");
+	}
+	return 0;
+}
