@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_BOOKS 100
+
+// Define structure for book
+struct Book {
+    char name[100];
+    char author[100];
+    int id;
+    int availability; // 1 for available, 0 for not available
+};
+
+int main() {
+    // Declare an array of structures to store books
+    struct Book library[MAX_BOOKS];
+
+    // Add books to the library
+    strcpy(library[0].name, "The Great Gatsby");
+    strcpy(library[0].author, "F. Scott Fitzgerald");
+    library[0].id = 101;
+    library[0].availability = 1;
+
+    strcpy(library[1].name, "To Kill a Mockingbird");
+    strcpy(library[1].author, "Harper Lee");
+    library[1].id = 102;
+    library[1].availability = 0;
+
+    // Print book details
+    printf("Book Name\tAuthor\t\tID\tAvailability\n");
+    for (int i = 0; i < 2; i++) {
+        printf("%s\t%s\t%d\t%s\n", library[i].name, library[i].author, library[i].id,
+               (library[i].availability == 1) ? "Available" : "Not Available");
+    }
+
+    return 0;
+}
