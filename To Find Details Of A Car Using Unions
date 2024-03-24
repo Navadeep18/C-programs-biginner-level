@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_CARS 100
+
+// Define structure for car
+struct Car {
+    char name[100];
+    char author[100];
+    int id;
+    union {
+        int available;  // Using int to represent availability: 1 for available, 0 for not available
+        char availability[20]; // Or using a string to represent availability
+    } status;
+};
+
+int main() {
+    // Declare an array of structures to store cars
+    struct Car garage[MAX_CARS];
+
+    // Add cars to the garage
+    strcpy(garage[0].name, "Toyota Camry");
+    strcpy(garage[0].author, "Toyota");
+    garage[0].id = 101;
+    garage[0].status.available = 1;
+
+    strcpy(garage[1].name, "Honda Accord");
+    strcpy(garage[1].author, "Honda");
+    garage[1].id = 102;
+    garage[1].status.available = 0;
+
+    // Print car details
+    printf("Car Name\tAuthor\t\tID\tAvailability\n");
+    for (int i = 0; i < 2; i++) {
+        printf("%s\t%s\t%d\t%s\n", garage[i].name, garage[i].author, garage[i].id,
+               (garage[i].status.available == 1) ? "Available" : "Not Available");
+    }
+
+    return 0;
+}
