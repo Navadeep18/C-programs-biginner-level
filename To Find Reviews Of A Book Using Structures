@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<string.h>
+#define  MAX_REVIEWS 10
+#define MAX_NAME_LENGTH 50
+
+	struct Review
+	{
+		char reviewer_name[MAX_NAME_LENGTH];
+		int rating;
+	
+	};
+	struct Book
+	{
+	
+	char title[MAX_NAME_LENGTH];
+	char author[MAX_NAME_LENGTH];
+	
+	struct Review reviews[MAX_REVIEWS];
+	int num_reviews; 
+	
+};
+void addreview(struct Book*book,const char*reviewer_name,int rating)
+{
+	if(book->num_reviews<MAX_REVIEWS)
+	{
+		strcpy(book->reviews[book->num_reviews].reviewer_name,reviewer_name);
+		book->reviews[book->num_reviews].rating=rating;
+		book->num_reviews++;
+		printf("Review added successfully");
+	}
+		else
+		{
+			printf("Max number of review reached");
+		}
+		
+	}
+	int main()
+	{
+		int i;
+		struct Book myBook;
+	strcpy(myBook.title,"Sample Book");
+	strcpy(myBook.author,"Rakcha");	
+	myBook.num_reviews=0;
+	
+	addreview(&myBook,"Reviewer 1",4);
+	addreview(&myBook,"Reviewer 2",4);
+	addreview(&myBook,"Reviewer 3",5);
+	printf("BOOK TITLE IS %s\n",myBook.title);
+   printf("BOOK AUTHOR IS %s\n",myBook.author);
+	printf("Reviews:\n");
+
+	 for(i=0;i<myBook.num_reviews;i++)
+	{
+		printf("Reviews %d by %s : Rating %d/5 \n",i+1,myBook.reviews[i].reviewer_name,myBook.reviews[i].rating);
+	}
+
+	return 0;
+}
