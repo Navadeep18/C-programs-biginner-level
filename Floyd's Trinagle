@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int rows=5,c=1,r,k;
+	for(r=0;r<rows;r++)
+	{
+		for(k=0;k<r;k++)
+		{
+			printf("%d ",c++);
+		}
+		printf("\n");
+	}
+	return 0;
+}
